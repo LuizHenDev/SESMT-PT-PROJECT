@@ -17,7 +17,7 @@ global $SETTING_TYPES;
     </div>
 </div>
 
-<ul class="nav nav-tabs mb-4">
+<ul class="nav nav-tabs">
     <?php foreach ($SETTING_TYPES as $key => $label): ?>
         <li class="nav-item">
             <a class="nav-link <?php echo $key === $type ? 'active' : ''; ?>" href="<?php echo APP_URL; ?>/index.php?page=cadastros&type=<?php echo urlencode($key); ?>">

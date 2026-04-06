@@ -12,6 +12,9 @@
 // Iniciar sessão
 session_start();
 
+// Ativar buffer de saída para permitir redirecionamentos após views parcialmente geradas
+ob_start();
+
 // Carregar configurações e helpers
 require_once __DIR__ . '/config/constants.php';
 require_once __DIR__ . '/config/database.php';

@@ -68,6 +68,11 @@ function requireAdmin() {
  * Redireciona para URL
  */
 function redirect($url, $delay = 0) {
+    // Limpa qualquer saída já gerada antes de enviar cabeçalhos
+    if (ob_get_level() > 0) {
+        ob_clean();
+    }
+
     // Previne cache e reenvio de POST
     header("Cache-Control: no-cache, no-store, must-revalidate");
     header("Pragma: no-cache");

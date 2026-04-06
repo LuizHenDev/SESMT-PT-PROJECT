@@ -30,11 +30,9 @@ global $EMPLOYEE_STATUS;
             <tr>
                 <th>#</th>
                 <th>Nome</th>
-                <th>CPF</th>
                 <th>Cargo</th>
                 <th>Setor</th>
                 <th>Data Admissão</th>
-                <th>Email</th>
                 <th>Status</th>
                 <th>Ações</th>
             </tr>
@@ -42,18 +40,16 @@ global $EMPLOYEE_STATUS;
         <tbody>
             <?php if (empty($employees)): ?>
                 <tr>
-                    <td colspan="9" class="text-center text-muted py-4">Nenhum colaborador encontrado</td>
+                    <td colspan="7" class="text-center text-muted py-4">Nenhum colaborador encontrado</td>
                 </tr>
             <?php else: ?>
                 <?php foreach ($employees as $emp): ?>
                     <tr>
                         <td><?php echo $emp['id']; ?></td>
                         <td><strong><?php echo htmlspecialchars($emp['name']); ?></strong></td>
-                        <td><?php echo formatCPF($emp['cpf']); ?></td>
                         <td><?php echo htmlspecialchars($emp['job_title']); ?></td>
                         <td><?php echo htmlspecialchars($emp['department']); ?></td>
                         <td><?php echo formatDate($emp['hire_date']); ?></td>
-                        <td><small><?php echo htmlspecialchars($emp['email'] ?? '-'); ?></small></td>
                         <td>
                             <span class="badge <?php echo $emp['status'] === 'ativo' ? 'bg-success' : 'bg-danger'; ?>">
                                 <?php echo htmlspecialchars($EMPLOYEE_STATUS[$emp['status']] ?? $emp['status']); ?>

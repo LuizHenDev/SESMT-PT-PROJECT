@@ -49,6 +49,7 @@ main {
     position: sticky;
     top: 0;
     overflow-y: auto;
+    z-index: 100;
 }
 
 .nav-link {
@@ -63,18 +64,46 @@ main {
 .nav-link:hover {
     background-color: rgba(45, 106, 62, 0.1);
     color: var(--sesmt-green) !important;
-    padding-left: 1.5rem;
+}
+
+.nav-tabs {
+    margin-bottom: 1rem;
+    color: var(--sesmt-green);
+}
+
+.nav-tabs .nav-link {
+    white-space: nowrap;
+    margin: 0 0.25rem 0 0;
+    padding: 0.6rem 1rem;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: rgba(45, 106, 62, 0.1);
+    color: var(--sesmt-green) !important;
 }
 
 .nav-link.active {
     background-color: var(--sesmt-green);
-    color: white !important;
+    color: rgb(18, 77, 4) !important;
 }
 
 .nav-link i {
     width: 20px;
     text-align: center;
     margin-right: 10px;
+}
+
+/* ========================================================
+   MAIN CONTENT LAYOUT
+   ======================================================== */
+
+main {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 0; /* Prevent flex item from overflowing */
 }
 
 /* ========================================================
@@ -424,4 +453,46 @@ main {
 
 .fade-in {
     animation: fadeIn 0.3s ease;
+}
+
+/* ========================================================
+   RESPONSIVE LAYOUT FIXES
+   ======================================================== */
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        width: 100% !important;
+        min-height: auto;
+        margin-bottom: 1rem;
+    }
+    
+    .d-flex {
+        flex-direction: column;
+    }
+    
+    main {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* ========================================================
+   TABLE RESPONSIVE FIXES
+   ======================================================== */
+
+.table-responsive {
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    border-top: none;
+    font-weight: 600;
+    color: #495057;
+}
+
+.table td {
+    vertical-align: middle;
 }
