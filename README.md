@@ -222,8 +222,5 @@ Sistema PRONTO para PRODUÇÃO LOCAL (XAMPP)
 
 ---
 
-**Desenvolvido por GitHub Copilot**  
-**Data: 2024**  
-**Versão: 1.0.0**  
+**Desenvolvido por Luiz Henrique**  
 
-🚀 **Pronto para usar em C:\xampp\htdocs\sesmt-system**
