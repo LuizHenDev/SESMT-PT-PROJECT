@@ -203,10 +203,6 @@ CREATE TABLE IF NOT EXISTS settings (
 INSERT INTO users (name, email, password, role, active) VALUES 
 ('Administrador SESMT', 'admin@sesmt.com', '$2y$10$4K6TZrRvJMvQQw.QS7F6Qu.3y1j.TUJ.5Jl5D.0V1F8K5gV.jQmba', 'admin', 1);
 
--- Additional admin user: ti03@labelgroup.com.br / Label*123
-INSERT INTO users (name, email, password, role, active) VALUES 
-('TI Admin LabelGroup', 'ti03@labelgroup.com.br', '$2b$10$jBkNhDXtTdjqrnSLGLJI/.06w8iA9Dm4xxoL9kjWtgP.u6hncVLTu', 'admin', 1);
-
 -- Default dynamic config values
 INSERT INTO settings (type, code, label, active, sort_order) VALUES
 ('pt_type', 'altura', 'Trabalho em Altura', 1, 1),
@@ -227,10 +223,7 @@ INSERT INTO settings (type, code, label, active, sort_order) VALUES
 ('employee_status', 'inativo', 'Inativo', 1, 2);
 
 -- Sample Employee Data
-INSERT INTO employees (name, cpf, email, job_title, department, hire_date, status) VALUES
-('Leandro Moraes', '12345678901234', 'ti@labelgroup.com.br', 'Coordenador', 'T.I', '2016-01-15', 'ativo'),
-('Haniel Farias', '23456789012345', 'ti02@labelgroup.com.br', 'Analista', 'T.I', '2026-03-20', 'ativo'),
-('Luiz Henrique', '34567890123456', 'ti03@labelgroup.com.br', 'Auxiliar', 'Administrativo', '2025-09-10', 'ativo');
+
 
 -- Sample EPI Data
 INSERT INTO epis (name, type, description, expiry_date, quantity, unit_cost) VALUES
